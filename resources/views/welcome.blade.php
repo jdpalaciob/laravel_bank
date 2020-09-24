@@ -25,8 +25,8 @@
     </div>
 
     <div class="links">
-        <a href="">Users</a>
-        <a href="">Accounts</a>
+        <a href="{{route('clients.index')}}">Clients</a>
+        <a href="{{route('accounts.index')}}">Accounts</a>
     </div>
 
 @endsection
