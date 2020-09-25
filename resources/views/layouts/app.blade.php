@@ -70,6 +70,23 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            dl {
+                clear: both;
+                overflow: hidden;
+                margin: 0.5em 0;
+                }
+
+            dt {
+                float: left;
+                font-weight: bold;
+                width: 125px;
+            }
+
+            dd {
+                float: left;
+                margin-left: 1em;
+            }
         </style>
     </head>
     <body>
