@@ -12,7 +12,7 @@
         </div>
 
         <div class="links">
-            <a href="">Creates New Account</a>
+            <a href="{{route('accounts.create')}}">Creates New Account</a>
         </div>
         <br />
         <table class="table table-striped">
