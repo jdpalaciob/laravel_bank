@@ -6,10 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Account extends Model
 {
-    protected $fillable = ['account_number', 'account_type', 'created', 'active', 'user_id'];
+    public $timestamps = false;
+    protected $fillable = ['account_number', 'account_type_id', 'created', 'active', 'user_id'];
+    //account_id->int
+    
 
-    public function accountType() 
+    public function account_type() 
     {
-        return $this->belongsTo('App\AccountType', 'account_type', 'id');
+        return $this->belongsTo('App\AccountType', 'account_type_id', 'id');//->select('id','account_type');
     }
 }

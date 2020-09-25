@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class AccountType extends Model
 {
+    public $timestamps = false;
     public $fillable = ['account_type'];
 
-    public function account()
+    public function accounts()
     {
-        return $this->hasOne('App\Account');
-    }
+        return $this->hasMany('App\Account', 'account_type_id', 'id');
+    } 
+    //Groupb by
 }
