@@ -33,7 +33,7 @@
                         <td>{{$account->account_type->account_type}}</td>
                         <td>{{$account->created}}</td>
                         <td>@if ($account->active == 1) YES @else NO @endif</td>
-                        <td>{{$account->username}}</td>
+                        <td>{{$account->client->username}}</td>
                         <td>View</td>
                         <td>Edit</td>
                         <td>Delete</td>

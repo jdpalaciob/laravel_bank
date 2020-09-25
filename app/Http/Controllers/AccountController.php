@@ -16,7 +16,7 @@ class AccountController extends Controller
     public function index()
     {
         // $accounts = Account::all();
-        $accounts = Account::with('account_type')->get();
+        $accounts = Account::with(['account_type','client'])->get();
         // $accounts = Account::with('account_type')->get()->toArray();
         // $accounts = Account::with('account_type')->first();
         // dd($accounts['account_number']);
