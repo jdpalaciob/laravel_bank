@@ -9,7 +9,7 @@
     <div class="container">
 
         <div class="links">
-            <a href="">&laquo; Back</a>
+            <a href="{{route('clients.index')}}">&laquo; Back</a>
         </div>
         <div class="title m-d-md">
             New Client
