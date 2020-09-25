@@ -6,12 +6,16 @@
 
 @section('content')
     <div class="content">
-        <h1>LB Clients</h1>
+
+        <div class="title m-d-md">
+            LB Clients
+        </div>
+        
         <div class="links">
             <a href="">Subscribe New Client</a>
         </div>
-
-        <table class="table">
+        <br />
+        <table class="table table-striped">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">ID</th>
@@ -25,7 +29,7 @@
                     <th scope="col">&nbsp;</th>
                 </tr>
             </thead>
-            <tbody class="table-striped">
+            <tbody>
                 @foreach ($clients as $client)
                     <tr>
                         <th scope="row">{{$client->id}}</th>

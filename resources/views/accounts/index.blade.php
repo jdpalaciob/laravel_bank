@@ -6,12 +6,16 @@
 
 @section('content')
     <div class="content">
-        <h1>Accounts</h1>
+
+        <div class="title m-d-md">
+            Accounts
+        </div>
+
         <div class="links">
             <a href="">Creates New Account</a>
         </div>
-
-        <table class="table">
+        <br />
+        <table class="table table-striped">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Acc_ID</th>
@@ -25,7 +29,7 @@
                     <th scope="col">&nbsp;</th>
                 </tr>
             </thead>
-            <tbody class="table-striped">
+            <tbody>
                 @foreach ($accounts as $account)
                     <tr>
                         <th scope="row">{{$account->id}}</th>

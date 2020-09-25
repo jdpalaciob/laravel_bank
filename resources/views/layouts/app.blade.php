@@ -21,6 +21,14 @@
                 margin: 0;
             }
 
+            nav {
+                text-align: center;
+            }
+
+            nav ul {
+                list-style: none;
+            }
+
             .full-height {
                 height: 100vh;
             }
@@ -65,8 +73,13 @@
         </style>
     </head>
     <body>
+        <nav>
+            <ul>
+                 <li class="links"><a href="{{url('/')}}">HOME</a></li>
+            </ul>
+        </nav>
         <div class="flex-center position-ref full-height">
-
+            
             @yield('content')
 
         </div>
