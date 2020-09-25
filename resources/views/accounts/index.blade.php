@@ -30,7 +30,7 @@
                     <tr>
                         <th scope="row">{{$account->id}}</th>
                         <td>{{$account->account_number}}</td>
-                        <td>{{$account->account_type}}</td>
+                        <td>{{$account->account_type->account_type}}</td>
                         <td>{{$account->created}}</td>
                         <td>@if ($account->active == 1) YES @else NO @endif</td>
                         <td>{{$account->username}}</td>

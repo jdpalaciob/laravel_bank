@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Account;
+use App\AccountType;
 use Illuminate\Http\Request;
 
 class AccountController extends Controller
@@ -14,7 +15,20 @@ class AccountController extends Controller
      */
     public function index()
     {
-        $accounts = Account::all();
+        // $accounts = Account::all();
+        $accounts = Account::with('account_type')->get();
+        // $accounts = Account::with('account_type')->get()->toArray();
+        // $accounts = Account::with('account_type')->first();
+        // dd($accounts['account_number']);
+        // $account_types = AccountType::with('accounts')->get();
+        // dd($account_type);
+        // foreach ($account_types as $key => $account_type) {
+        //     // dd($account);
+        //     foreach ($account_type->accounts as $key => $account) {
+        //         dd($account->account_number);
+        //     }
+        // }
+        // dd($accounts);
         $data = compact('accounts');
         return view('accounts.index', $data);
     }
