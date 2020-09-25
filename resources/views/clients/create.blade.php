@@ -16,7 +16,7 @@
         </div>
 
         <div class="container">
-            <form action="{{route('clients.store')}}">
+            <form action="{{route('clients.store')}}" method="POST">
                 @csrf
                 <dl>
                     <dt>First Name</dt>
