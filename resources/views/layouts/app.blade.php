@@ -73,7 +73,11 @@
         </style>
     </head>
     <body>
-        @yield('navigation panel')
+        <nav>
+            <ul>
+                 <li class="links"><a href="{{url('/')}}">HOME</a></li>
+            </ul>
+        </nav>
         <div class="flex-center position-ref full-height">
             
             @yield('content')
