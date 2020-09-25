@@ -12,7 +12,7 @@
         </div>
         
         <div class="links">
-            <a href="">Subscribe New Client</a>
+            <a href="{{route('clients.create')}}">Subscribe New Client</a>
         </div>
         <br />
         <table class="table table-striped">
