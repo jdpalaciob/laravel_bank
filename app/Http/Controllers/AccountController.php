@@ -93,7 +93,10 @@ class AccountController extends Controller
      */
     public function edit(Account $account)
     {
-        //
+        $client = Client::pluck('username', 'id');
+        $account_type = AccountType::pluck('account_type', 'id');
+        $data = compact('client', 'account_type');
+        return view('accounts.edit', $data);
     }
 
     /**
@@ -105,7 +108,7 @@ class AccountController extends Controller
      */
     public function update(Request $request, Account $account)
     {
-        //
+        dd($request, $account);
     }
 
     /**
