@@ -38,7 +38,9 @@
                         <td>{{$account->created}}</td>
                         <td>@if ($account->active == 1) YES @else NO @endif</td>
                         <td>{{$account->client->username}}</td>
-                        <td>View</td>
+                        <td>
+                            <a href="{{route('accounts.show', $account)}}">View</a>
+                        </td>
                         <td>Edit</td>
                         <td>Delete</td>
                     </tr>
