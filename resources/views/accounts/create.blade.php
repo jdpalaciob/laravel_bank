@@ -26,7 +26,6 @@
                                 <option value="{{$id}}">{{$username}}</option>
                             @endforeach
                         </select>
-                        <input type="text" name="username" id="username">
                     </dd>
                 </dl>
                 <dl>
