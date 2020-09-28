@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Account;
+use App\Client;
 use App\AccountType;
 use Illuminate\Http\Request;
 
@@ -40,7 +41,11 @@ class AccountController extends Controller
      */
     public function create()
     {
-        return view('accounts.create');
+        $usernames = Client::all()->pluck('username', 'id');
+        $account_types = AccountType::all()->pluck('account_type', 'id');
+        $data = compact('usernames', 'account_types');
+        // dd($data);
+        return view('accounts.create', $data);
     }
 
     /**
