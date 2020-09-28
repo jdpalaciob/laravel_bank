@@ -5,12 +5,12 @@
 @endsection
 
 @section('content')
-    <div class="container">
-        <dl>
-            @foreach ($client->getAttributes() as $field => $row)
-                <dt>{{ $field }}</dt>
+    <div class="content">
+        @foreach ($client->getAttributes() as $field => $row)
+            <dl>
+                <dt>{{ strtoupper($field) }}</dt>
                 <dd>{{ $row }}</dd>
-            @endforeach
-        </dl>
+            </dl>
+        @endforeach
     </div>
 @endsection
