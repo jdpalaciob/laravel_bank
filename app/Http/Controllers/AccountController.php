@@ -69,9 +69,7 @@ class AccountController extends Controller
      */
     public function show(Client $client)
     {
-        $data = compact($client);
-        // dd($data);
-        return view('clients.show', $data);
+        //
     }
 
     /**

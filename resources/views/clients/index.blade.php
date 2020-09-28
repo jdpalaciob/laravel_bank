@@ -39,7 +39,7 @@
                         <td>{{$client->email}}</td>
                         <td>{{$client->username}}</td>
                         <td>
-                            <a href="{{ route('clients.show')}}">View</a>
+                            <a href="{{ route('clients.show', $client)}}">View</a>
                         </td>
                         <td>Edit</td>
                         <td>Delete</td>
