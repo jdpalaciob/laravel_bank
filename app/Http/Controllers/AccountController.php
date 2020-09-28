@@ -56,7 +56,9 @@ class AccountController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+        Account::create($request->all());
+        return redirect()->route('accounts.index');
     }
 
     /**
