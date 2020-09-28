@@ -69,7 +69,18 @@ class AccountController extends Controller
      */
     public function show(Account $account)
     {
-        //
+        $owner = $account->client->first_name . $account->client->last_name;
+        dd($owner);
+
+        $info = [
+            'Number' => $account->account_number,
+            'Type' => $account->account_type->account_type,
+            'Owner' => $owner,
+            'Owner Username' => $account->client->username,
+            'Owner Phone' => $account->client->phone_number,
+            'Owner Email' => $account->client->email,
+            'Active' => $account->active === 1 ? 'YES' : 'NO'
+        ];
     }
 
     /**
