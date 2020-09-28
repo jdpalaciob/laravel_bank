@@ -41,7 +41,9 @@
                         <td>
                             <a href="{{ route('clients.show', $client)}}">View</a>
                         </td>
-                        <td>Edit</td>
+                        <td>
+                            <a href="{{ route('clients.edit', $client)}}">Edit</a>
+                        </td>
                         <td>Delete</td>
                     </tr>
                 @endforeach
