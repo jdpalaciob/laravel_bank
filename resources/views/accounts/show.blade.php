@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>{{$info->username}} Account</title>
+    <title>{{$info['Username']}} Account</title>
 @endsection
 
 @section('content')
     <div class="content">
-        @foreach ($info->getAttributes() as $field => $row)
+        @foreach ($info as $field => $row)
             <dl>
                 <dt>{{ strtoupper($field) }}</dt>
                 <dd>{{ $row }}</dd>
