@@ -21,6 +21,11 @@
                 <dl>
                     <dt>Client Username</dt>
                     <dd>
+                        <select name="client_id" id="client_id">
+                            @foreach ($usernames as $id => $username)
+                                <option value="{{$id}}">{{$username}}</option>
+                            @endforeach
+                        </select>
                         <input type="text" name="username" id="username">
                     </dd>
                 </dl>
@@ -28,7 +33,9 @@
                     <dt>Account Type</dt>
                     <dd>
                         <select name="account_type_id" id="account_type">
-                            <option>TEST</option>
+                            @foreach ($account_types as $id => $account_type)
+                                <option value="{{$id}}">{{$account_type}}</option>
+                            @endforeach
                         </select>
                     </dd>
                 </dl>
