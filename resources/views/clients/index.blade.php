@@ -38,7 +38,9 @@
                         <td>{{$client->phone_number}}</td>
                         <td>{{$client->email}}</td>
                         <td>{{$client->username}}</td>
-                        <td>View</td>
+                        <td>
+                            <a href="{{ route('clients.show')}}">View</a>
+                        </td>
                         <td>Edit</td>
                         <td>Delete</td>
                     </tr>
