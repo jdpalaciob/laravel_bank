@@ -44,7 +44,15 @@
                         <td>
                             <a href="{{ route('clients.edit', $client)}}">Edit</a>
                         </td>
-                        <td>Delete</td>
+                        <td>
+                            <form action="{{route('clients.destroy', $client)}}">
+                                @csrf
+                                @method('DELETE')
+                                {{-- <button class="btn btn-link" type="submit">Delete</button> --}}
+                                {{-- <button type="button" class="btn btn-danger">Delete</button> --}}
+                                <a href="#" role="button" type="submit">Delete</a>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
