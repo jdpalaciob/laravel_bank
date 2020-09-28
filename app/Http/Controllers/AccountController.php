@@ -95,7 +95,8 @@ class AccountController extends Controller
     {
         $usernames = Client::pluck('username', 'id');
         $account_types = AccountType::pluck('account_type', 'id');
-        $data = compact('usernames', 'account_type');
+        $data = compact('usernames', 'account_types', 'account');
+        // dd($account_types);
         return view('accounts.edit', $data);
     }
 
@@ -108,7 +109,9 @@ class AccountController extends Controller
      */
     public function update(Request $request, Account $account)
     {
-        dd($request, $account);
+        // dd($request, $account);
+        $account->update($request->all());
+        return redirect()->route('accounts.show', $account);
     }
 
     /**

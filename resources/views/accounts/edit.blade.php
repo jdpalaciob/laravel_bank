@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    <title>Edit Account {{$username->username}}</title>
+    <title>Edit Account {{$account->client->username}}</title>
 @endsection
 
 @section('content')
@@ -34,7 +34,7 @@
                     <dd>
                         <select name="account_type_id" id="account_type">
                             @foreach ($account_types as $id => $account_type)
-                                <option value="{{$id}}" {{($id===$account_type->$id) ? 'selected' : ''}}>{{$account_type}}</option>
+                                <option value="{{$id}}" {{($id===$account->account_type_id) ? 'selected' : ''}}>{{$account_type}}</option>
                             @endforeach
                         </select>
                     </dd>
