@@ -44,7 +44,13 @@
                         <td>
                             <a href="{{route('accounts.edit', $account)}}">Edit</a>
                         </td>
-                        <td>Delete</td>
+                        <td>
+                            <form action="{{route('accounts.destroy', $account)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="button" class="btn btn-secondary btn-sm">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
