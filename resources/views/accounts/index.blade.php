@@ -41,7 +41,9 @@
                         <td>
                             <a href="{{route('accounts.show', $account)}}">View</a>
                         </td>
-                        <td>Edit</td>
+                        <td>
+                            <a href="{{route('accounts.edit', $account)}}">Edit</a>
+                        </td>
                         <td>Delete</td>
                     </tr>
                 @endforeach
