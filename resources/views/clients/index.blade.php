@@ -45,12 +45,10 @@
                             <a href="{{ route('clients.edit', $client)}}">Edit</a>
                         </td>
                         <td>
-                            <form action="{{route('clients.destroy', $client)}}">
+                            <form action="{{route('clients.destroy', $client)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                {{-- <button class="btn btn-link" type="submit">Delete</button> --}}
-                                {{-- <button type="button" class="btn btn-danger">Delete</button> --}}
-                                <a href="#" role="button" type="submit">Delete</a>
+                                <button type="button" class="btn btn-secondary btn-sm">Delete</button>
                             </form>
                         </td>
                     </tr>
