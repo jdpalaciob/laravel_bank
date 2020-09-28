@@ -16,7 +16,7 @@
         </div>
 
         <div class="container">
-            <form action="{{route('clients.update')}}" method="POST">
+            <form action="{{route('clients.update', $client)}}" method="POST">
                 @csrf
                 @method('PUT')
                 <dl>
