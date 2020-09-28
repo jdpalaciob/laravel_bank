@@ -1,0 +1,2 @@
+El nombre del respositorio es enteramente didáctico y no representa ninguna relación entre este repositorio y el framework en cuestión.
+El nombre laravel NO es propiedad del duño del presente repositorio.
