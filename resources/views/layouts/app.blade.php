@@ -25,8 +25,13 @@
                 text-align: center;
             }
 
-            nav ul {
-                list-style: none;
+            nav > ul {
+                list-style-type: none;
+                text-align: center;
+            }
+
+            ul > li {
+                display: inline;
             }
 
             .full-height {
@@ -93,8 +98,8 @@
         <nav>
             <ul>
                  <li class="links"><a href="{{url('/')}}">HOME</a></li>
-                 {{-- <li class="links"><a href="{{url('login')}}">LOGIN</a></li>
-                 <li class="links"><a href="{{url('register')}}">REGISTER</a></li> --}}
+                 <li class="links"><a href="{{url('login')}}">LOGIN</a></li>
+                 <li class="links"><a href="{{url('register')}}">REGISTER</a></li>
             </ul>
         </nav>
         <div class="flex-center position-ref full-height">
