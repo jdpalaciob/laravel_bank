@@ -97,9 +97,30 @@
     <body>
         <nav>
             <ul>
-                 <li class="links"><a href="{{url('/')}}">HOME</a></li>
-                 <li class="links"><a href="{{url('login')}}">LOGIN</a></li>
-                 <li class="links"><a href="{{url('register')}}">REGISTER</a></li>
+                <li class="links"><a href="{{url('/')}}">HOME</a></li>
+                @guest
+                    @if (Route::has('login'))
+                        <li class="links"><a href="{{url('login')}}">LOGIN</a></li>
+
+                        @if (Route::has('register'))
+                            <li class="links"><a href="{{url('register')}}">REGISTER</a></li>
+                        @endif                       
+                    @endif
+                @else
+                    @auth
+                        <li class="links">
+                            <a href="{{route('home')}}">SESSION</a>
+
+                            <a href="{{route('logout')}}" onclick="event.preventDefault();
+                                                                    document.getElementById('logout-form').submit();">
+                                LOGOUT
+                            </a>
+                            <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none">
+                                @csrf
+                            </form>
+                        </li>
+                    @endauth                       
+                @endguest
             </ul>
         </nav>
         <div class="flex-center position-ref full-height">

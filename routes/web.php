@@ -21,6 +21,12 @@ Route::get('/', function () {
 Route::resource('/clients', 'ClientController');
 
 Route::resource('/accounts', 'AccountController');
+
 Auth::routes();
+
+// Route::get('/logout', function() {
+//     Auth::logout();
+//     return Redirect::route('login');
+//     })->name('logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
