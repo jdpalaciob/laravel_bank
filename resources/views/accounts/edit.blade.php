@@ -52,7 +52,8 @@
                     </dd>
                 </dl>
                 <dl>
-                    <input type="checkbox" name="active" id="active" value=1 {{($account->active === 1) ? 'checked' : ''}}>
+                    <input type="hidden" name="active" value=0>
+                    <input type="checkbox" name="active" id="active" value=1 {{($account->active == 1) ? 'checked' : ''}}>
                     <label for="active">Active</label>
                 </dl>
                 <button><b>Submit</b></button>
