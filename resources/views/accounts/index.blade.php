@@ -36,7 +36,7 @@
                         <td>{{$account->account_number}}</td>
                         <td>{{$account->account_type->account_type}}</td>
                         <td>{{$account->created}}</td>
-                        <td>@if ($account->active == 1) YES @else NO @endif</td>
+                        <td>{{ ($account->active == 1) ? 'YES' : 'NO'}}</td>
                         <td>{{$account->client->username}}</td>
                         <td>
                             <a href="{{route('accounts.show', $account)}}">View</a>
