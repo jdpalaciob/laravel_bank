@@ -6,6 +6,7 @@ use App\Account;
 use App\Client;
 use App\AccountType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class AccountController extends Controller
 {
@@ -57,6 +58,9 @@ class AccountController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
+        $message = ['alert' => 'ACCOUNT SUCCESSFULLY CREATED!'];
+        Session::flash('message', $message);
+
         Account::create($request->all());
         return redirect()->route('accounts.index');
     }

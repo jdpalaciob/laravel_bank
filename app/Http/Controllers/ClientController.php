@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ClientController extends Controller
 {
@@ -37,6 +38,9 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
+        $message = ['alert' => 'CLIENT SUCCESSFULLY CREATED!'];
+        Session::flash('message', $message);
+        
         $client = Client::create($request->all());
         return redirect()->route('clients.index');
     }

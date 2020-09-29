@@ -95,10 +95,23 @@
                  <li class="links"><a href="{{url('/')}}">HOME</a></li>
             </ul>
         </nav>
-        <div class="flex-center position-ref full-height">
-            
-            @yield('content')
 
+        @if (Session::has('message'))
+            <div class="alert alert-success" role="alert">
+                {{Session::get('message')['alert']}}
+            </div>
+        @endif
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="flex-center position-ref full-height">
+            
+                        @yield('content')
+            
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
