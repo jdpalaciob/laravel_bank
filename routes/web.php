@@ -12,6 +12,7 @@
 */
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,3 +21,6 @@ Route::get('/', function () {
 Route::resource('/clients', 'ClientController');
 
 Route::resource('/accounts', 'AccountController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

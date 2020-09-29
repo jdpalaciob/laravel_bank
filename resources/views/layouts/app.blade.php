@@ -93,6 +93,8 @@
         <nav>
             <ul>
                  <li class="links"><a href="{{url('/')}}">HOME</a></li>
+                 {{-- <li class="links"><a href="{{url('login')}}">LOGIN</a></li>
+                 <li class="links"><a href="{{url('register')}}">REGISTER</a></li> --}}
             </ul>
         </nav>
         <div class="flex-center position-ref full-height">
