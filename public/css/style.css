@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: #000000; */
+    font-family: 'Nunito', sans-serif;
+    color: #636b6f;
+}
+
+header, footer, main {
+    /* background: white; */
+    /* 90% del espacio disponible (en sección padre) */
+    /* width: 90%; */
+    /* Centra el cajón y deja 0.5em por encima */
+    margin: 0.5em auto;
+    text-align: center;
+}
+
+
+.links > li {
+    /* background: #000; */
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    margin: auto 1em;
+}
+
+.links a {
+    text-decoration: none;
+    color: #636b6f;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+a:hover {
+    color: #5B6265;
+    font-weight: 700;
+    border-bottom: 0.1rem solid #5B6265;
+}
+
+.main-title {
+    font-size: 5em;
+    font-weight: 200;
+    margin-bottom: 0.3em;
+}
+
+.subtitle {
+    margin-bottom: 2em;
+}
+
+.laravel {
+    text-decoration: none;
+    font-weight: 600;
+    color: #636b6f;
+    font-style: italic;
+}
+
+.container {
+    /* background: blue; */
+    width: 90%;
+    margin: auto;
+    padding: 7%;
+}
+
+table.main-table {
+    /* background: aqua; */
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+    color: #000000;
+}
+
+th, td {
+    border: 0.1em solid #000000;
+}
+
+tr {
+    height: 3em;
+    text-align: center;
+}
+
+.main-table tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.15);
+}
+
+.main-table thead {
+    color: #ffffff;
+    background:#343a40;
+}
+
+.in-header {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+.in-header  > li {
+    list-style: none;
+    display: inline-block;
+    margin: auto 1em;
+}
+
+.in-header li:nth-child(even) {
+    float: right;
+}
+
+.in-header li:nth-child(odd) {
+    float: left;
+}
