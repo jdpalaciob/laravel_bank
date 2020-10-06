@@ -6,15 +6,17 @@
 
 @section('content')
 
-    <div class="content">
-        <div class="title m-b-md">
-            LARAVEL BANK
-        </div>
+    <div class="container">
 
-        <div class="links">
-            <a href="{{route('clients.index')}}">Clients</a>
-            <a href="{{route('accounts.index')}}">Accounts</a>
-        </div>
+        <h1 class="main-title">LARAVEL BANK</h1>
+
+        <p class="subtitle">El banco de pruebas para uso de <a class="laravel" href="https://laravel.com/">laravel</a></p>
+
+        <ul class="links">
+            <li><a href="{{route('clients.index')}}">Clients</a></li>
+            <li><a href="{{route('accounts.index')}}">Accounts</a></li>
+        </ul>
+
     </div>
 
 @endsection
