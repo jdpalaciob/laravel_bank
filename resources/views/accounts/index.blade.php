@@ -5,18 +5,18 @@
 @endsection
 
 @section('content')
-    <div class="content">
+    <div class="container">
 
-        <div class="title m-d-md">
-            Accounts
-        </div>
+        <ul class="in-header">
+            <li><a class="laravel" href="#">&laquo; Back</a></li>
+            <li><a class="laravel" href="#">Open New Account &raquo;</a></li>
+        </ul>
+        <br>
 
-        <div class="links">
-            <a href="{{route('accounts.create')}}">Creates New Account</a>
-        </div>
+        <h1 class="main-title">Accounts</h1>
         <br />
-        <table class="table table-striped">
-            <thead class="thead-dark">
+        <table class="main-table">
+            <thead>
                 <tr>
                     <th scope="col">Acc_ID</th>
                     <th scope="col">Number</th>

@@ -5,18 +5,19 @@
 @endsection
 
 @section('content')
-    <div class="content">
+    <div class="container">
 
-        <div class="title m-d-md">
-            LB Clients
-        </div>
-        
-        <div class="links">
-            <a href="{{route('clients.create')}}">Subscribe New Client</a>
-        </div>
+        <ul class="in-header">
+            <li><a class="laravel" href="#">&laquo; Back</a></li>
+            <li><a class="laravel" href="#">Subscribe New Client &raquo;</a></li>
+        </ul>
+        <br>
+
+        <h1 class="main-title">LB Clients</h1>
         <br />
-        <table class="table table-striped">
-            <thead class="thead-dark">
+
+        <table class="main-table">
+            <thead>
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">F. Name</th>
