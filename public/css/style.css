@@ -35,7 +35,7 @@ header, footer, main {
     font-size: 16px;
 }
 
-a:hover {
+.links a:hover {
     color: #5B6265;
     font-weight: 700;
     border-bottom: 0.1rem solid #5B6265;
@@ -73,10 +73,6 @@ table.main-table {
     color: #000000;
 }
 
-th, td {
-    border: 0.1em solid #000000;
-}
-
 tr {
     height: 3em;
     text-align: center;
@@ -89,6 +85,16 @@ tr {
 .main-table thead {
     color: #ffffff;
     background:#343a40;
+}
+
+table a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #000000ca;
+}
+
+table a:hover {
+    text-decoration: underline;
 }
 
 .in-header {
@@ -109,4 +115,8 @@ tr {
 
 .in-header li:nth-child(odd) {
     float: left;
+}
+
+.in-header a:hover {
+    text-decoration: underline;
 }

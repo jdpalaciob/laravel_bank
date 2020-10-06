@@ -8,8 +8,8 @@
     <div class="container">
 
         <ul class="in-header">
-            <li><a class="laravel" href="#">&laquo; Back</a></li>
-            <li><a class="laravel" href="#">Subscribe New Client &raquo;</a></li>
+            <li><a class="laravel" href="{{url('/')}}">&laquo; Back</a></li>
+            <li><a class="laravel" href="{{route('clients.create')}}">Subscribe New Client &raquo;</a></li>
         </ul>
         <br>
 
