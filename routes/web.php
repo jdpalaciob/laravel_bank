@@ -11,12 +11,28 @@
 |
 */
 
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/clients', 'ClientController');
+// Route::resource('/clients', 'ClientController');
 
-Route::resource('/accounts', 'AccountController');
+// Route::resource('/accounts', 'AccountController')->middleware('auth');
+
+Auth::routes();
+
+// Route::get('/logout', function() {
+//     Auth::logout();
+//     return Redirect::route('login');
+//     })->name('logout');
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::middleware('auth')->group(function() {
+    Route::resource('/clients', 'ClientController');
+    Route::resource('/accounts', 'AccountController');
+});
