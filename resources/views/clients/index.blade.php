@@ -46,10 +46,12 @@
                             <a href="{{ route('clients.edit', $client)}}">Edit</a>
                         </td>
                         <td>
-                            <form action="{{route('clients.destroy', $client)}}" method="POST">
+                            <a href="#" onclick="event.preventDefault();
+                                                    document.getElementById({{$client->id}}).submit();">Delete</a>
+
+                            <form action="{{route('clients.destroy', $client)}}" id="{{$client->id}}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-secondary btn-sm">Delete</button>
                             </form>
                         </td>
                     </tr>
