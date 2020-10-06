@@ -45,11 +45,11 @@
             </nav>
         </header>
 
-        {{-- @if (Session::has('message'))
+        @if (Session::has('message'))
             <div class="alert alert-success" role="alert">
                 {{Session::get('message')['alert']}}
             </div>
-        @endif --}}
+        @endif
 
         <main>
     
