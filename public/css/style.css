@@ -15,11 +15,13 @@ header, footer, main {
     /* 90% del espacio disponible (en sección padre) */
     /* width: 90%; */
     /* Centra el cajón y deja 0.5em por encima */
-    margin: 0.5em auto;
+    margin: auto auto;
     text-align: center;
 }
 
-
+/* 
+LINKS
+*/
 .links > li {
     /* background: #000; */
     display: inline-block;
@@ -41,6 +43,16 @@ header, footer, main {
     border-bottom: 0.1rem solid #5B6265;
 }
 
+.laravel {
+    text-decoration: none;
+    font-weight: 600;
+    color: #636b6f;
+    font-style: italic;
+}
+
+/* 
+TITLES
+*/
 .main-title {
     font-size: 5em;
     font-weight: 200;
@@ -51,20 +63,42 @@ header, footer, main {
     margin-bottom: 2em;
 }
 
-.laravel {
-    text-decoration: none;
-    font-weight: 600;
-    color: #636b6f;
-    font-style: italic;
-}
-
+/* 
+SECTIONS
+*/
 .container {
     /* background: blue; */
     width: 90%;
     margin: auto;
     padding: 7%;
 }
+.in-header {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
 
+.in-header  > li {
+    list-style: none;
+    display: inline-block;
+    margin: auto 1em;
+}
+
+.in-header li:nth-child(even) {
+    float: right;
+}
+
+.in-header li:nth-child(odd) {
+    float: left;
+}
+
+.in-header a:hover {
+    text-decoration: underline;
+}
+
+/* 
+TABLES
+*/
 table.main-table {
     /* background: aqua; */
     border-collapse: collapse;
@@ -97,26 +131,18 @@ table a:hover {
     text-decoration: underline;
 }
 
-.in-header {
-    width: 80%;
-    margin: auto;
-    display: block;
+/* 
+FORMS
+*/
+.main-form {
+    background: #0fb8b8;
+    display: grid;
 }
 
-.in-header  > li {
-    list-style: none;
+.main-form dt {
+    text-transform: uppercase;
+}
+
+.main-form dd {
     display: inline-block;
-    margin: auto 1em;
-}
-
-.in-header li:nth-child(even) {
-    float: right;
-}
-
-.in-header li:nth-child(odd) {
-    float: left;
-}
-
-.in-header a:hover {
-    text-decoration: underline;
 }

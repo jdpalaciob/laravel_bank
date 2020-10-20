@@ -8,50 +8,50 @@
 
     <div class="container">
 
-        <div class="links">
-            <a href="{{route('clients.index')}}">&laquo; Back</a>
-        </div>
-        <div class="title m-d-md">
-            New Client
-        </div>
+        <ul class="in-header">
+            <li><a class="laravel" href="{{route('clients.index')}}">&laquo; Back</a></li>
+        </ul>
+        <br>
 
-        <div class="container">
-            <form action="{{route('clients.store')}}" method="POST">
-                @csrf
-                <dl>
-                    <dt>First Name</dt>
-                    <dd>
-                        <input type="text" name="first_name" id="first_name">
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>Last Name</dt>
-                    <dd>
-                        <input type="text" name="last_name" id="last_name">
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>Phone Number</dt>
-                    <dd>
-                        <input type="text" name="phone_number" id="phone_number">
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>Email</dt>
-                    <dd>
-                        <input type="text" name="email" id="email">
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>Username</dt>
-                    <dd>
-                        <input type="text" name="username" id="username">
-                    </dd>
-                </dl>
-                <button><b>Submit</b></button>
+        <h1 class="main-title">New Client</h1>
+        <br />
 
-            </form>
-        </div>
+        <form action="{{route('clients.store')}}" method="POST" class="main-form">
+            @csrf
+            <dl>
+                <dt>First Name</dt>
+                <dd>
+                    <input type="text" name="first_name" id="first_name">
+                </dd>
+            </dl>
+            <dl>
+                <dt>Last Name</dt>
+                <dd>
+                    <input type="text" name="last_name" id="last_name">
+                </dd>
+            </dl>
+            <dl>
+                <dt>Phone Number</dt>
+                <dd>
+                    <input type="text" name="phone_number" id="phone_number">
+                </dd>
+            </dl>
+            <dl>
+                <dt>Email</dt>
+                <dd>
+                    <input type="text" name="email" id="email">
+                </dd>
+            </dl>
+            <dl>
+                <dt>Username</dt>
+                <dd>
+                    <input type="text" name="username" id="username">
+                </dd>
+            </dl>
+            <button><b>Submit</b></button>
+
+        </form>
+        
     </div>
 
     
